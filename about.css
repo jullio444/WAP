@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Nov 2019, 13:56:48
+    Author     : scug
+*/
+
+body {
+  background-color: grey;
+  color: white;
+  font-size: 18px;
+  font-family: "Courier New", Helvetica, sans-serif;
+}
+
+h1, h3 {
+    color: lightskyblue
+}
+
+ .tab { 
+     margin-left: 100px; 
+ }
+ 
+ .span {
+     color: yellow
+ }
+ .span2{
+     color: red;
+     font-weight: bold;
+ }
