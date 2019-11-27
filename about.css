@@ -9,24 +9,58 @@ and open the template in the editor.
 */
 
 body {
-  background-color: grey;
-  color: white;
-  font-size: 18px;
-  font-family: "Courier New", Helvetica, sans-serif;
+    background-color: grey;
+    color: white;
+    font-size: 18px;
+    font-family: "Courier New", Helvetica, sans-serif;
 }
 
 h1, h3 {
     color: lightskyblue
 }
 
- .tab { 
-     margin-left: 100px; 
- }
- 
- .span {
-     color: yellow
- }
- .span2{
-     color: red;
-     font-weight: bold;
- }
+.tab { 
+    margin-left: 100px; 
+}
+
+.span {
+    color: yellow
+}
+.span2{
+    color: red;
+    font-weight: bold;
+}
+
+a:link { 
+    color: red; 
+    text-decoration: none
+}
+a:visited { 
+    color: white; 
+    text-decoration: none
+}
+a:hover { 
+    color: #3366CC; 
+    text-decoration: underline
+}
+a:active { 
+    color: blue; 
+    text-decoration: none
+}
+
+.firstcharacter {
+  float: left;
+  font-family: Georgia;
+  font-size: 35px;
+  line-height: 10px;
+  padding-left: 3px;
+}
+
+ol { 
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li {
+    flex: 0 0 auto;
+}
