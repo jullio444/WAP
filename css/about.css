@@ -49,11 +49,11 @@ a:active {
 }
 
 .firstcharacter {
-  float: left;
+  /*float: left;*/
   font-family: Georgia;
   font-size: 35px;
   line-height: 10px;
-  padding-left: 3px;
+  /*padding-left: 3px;*/
 }
 
 ol { 

@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Nov 2019, 22:00:07
+    Author     : scug
+*/
+body {
+    background: url("silverware.jpg");
+}
+#div1 {
+    width: 650px;
+    overflow:hidden;
+    margin:0 auto; 
+    letter-spacing: 10px;
+}
+.div2 {
+    float:right;
+    clear:both;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#hid {
+    width: 275px;
+    letter-spacing: 10px;      
+}
+#hid1 {
+    width: 250px;
+    letter-spacing: 10px;      
+}
+#hid2 {
+    width: 255px;
+    letter-spacing: 10px;      
+}
+
+#hid3 {
+    width: 345px;
+    letter-spacing: 10px;      
+}
+#hid4 {
+    width: 125px;
+    letter-spacing: 10px;  
+}
+h2 {   
+    background-color: #ededed;
+    color: #8f9602;
+    font-family: "San Francisco", Arial, Tahoma, Calibri;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-image: url("pie_icon.gif");
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.p {
+  padding-left: 70px;
+  padding-right: 70px;
+  background-clip: content-box;
+  background-color: yellow;
+}
+
+#p2 {
+    color:#8f9602;
+}
+
+a:link { 
+    color: #8f9602; 
+    text-decoration: none
+}
+a:visited { 
+    color: purple; 
+    text-decoration: none
+}
+a:hover { 
+    color: #3366CC; 
+    text-decoration: underline
+}
+
