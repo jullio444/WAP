@@ -16,7 +16,7 @@ body {
     margin:0 auto; 
     letter-spacing: 10px;
 }
-#div2 {
+.div2 {
     float:right;
     clear:both;
     padding-left: 15px;
@@ -55,11 +55,11 @@ ul {
     list-style-image: url("pie_icon.gif");
 }
 
-#bold {
+.bold {
     font-weight: bold;
 }
 
-#p {
+.p {
   padding-left: 70px;
   padding-right: 70px;
   background-clip: content-box;
