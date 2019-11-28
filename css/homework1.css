@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : scug
 */
 body {
-    background: url("silverware.jpg");
+    background: url("../images/silverware.jpg");
 }
 #div1 {
     width: 650px;
@@ -52,7 +52,7 @@ h2 {
 }
 
 ul {
-    list-style-image: url("pie_icon.gif");
+    list-style-image: url("../images/pie_icon.gif");
 }
 
 .bold {
