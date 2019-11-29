@@ -8,15 +8,14 @@ and open the template in the editor.
     Author     : scug
 */
 body {
-      background-image: url("../tmnt/background.png");
-      font-size: 18px;
+    background-color: #E4E4E4;
+    font-size: 18px;
 
 }
 .form {
-  width: 700px;
-  position:relative;
-  margin:  auto; 
-  background-image: url("../tmnt/background.png");
+    width: 700px;
+    position:relative;
+    margin:  auto; 
 }
 
 th.header{
@@ -31,17 +30,17 @@ tabledata{
     font-size: 25px;
 }
 .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 25px;
+    background-color: #A2B964;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
 }
 
 .span{
@@ -49,4 +48,17 @@ tabledata{
 }
 input [type="text"]{
     font-size: 24px;
+}
+
+.legend{
+    border: 2px solid gray;
+    background-color: #ffffff;
+}
+.fieldset{
+    background-color: #DFDFFE;
+    border-radius: 10px;
+}
+.divcss{
+    width: 400px;
+    margin: auto;
 }
