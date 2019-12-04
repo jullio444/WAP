@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>State Management Quiz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>State Management Quiz</h1>    
+
+            <h2>1. Can post requests be bookmarked? What are the problems? </h2>
+
+    Yes a post request can be bookmarked but since a bookmark only consists of the URL, 
+    all of the form parameters will be lost. This will often mean that the web server 
+    doesn't know what to do with the request, since it was expecting some form parameters.
+
+    <h2>2. What is the purpose of request dispatching?</h2>
+
+    The request dispatching provides the facility of forwarding the request to another resource 
+    it may be html, servlet or jsp. This is essential in inclusion of the content of 
+    another resource as well. It is one of the way of servlet collaboration.
+
+    <h2>3. What is the difference between redirect and request dispatch? </h2>
+
+    Redirect sends a HTTP Header to the response object to tell the user to access any resource 
+    (including resources from other servers). That changes the actual URL of the Request and 
+    requires an additional round trip. This doesn't happen in a request dispatch which just 
+    forward the request and response objects to another internal servlet, without changing the request URL.
+
+    <h2> 4. What is an attribute ? </h2>
+
+    An attribute in servlet is an object that can be set, get or removed from one of the following scopes:
+
+    -request scope
+    -session scope
+    -application scope
+
+    <h2>5. What is the difference between attributes and parameters? </h2>
+
+    The servlet programmer can pass informations from one servlet to another using attributes. 
+    It is just like passing object from one class to another so that we can reuse the same 
+    object again and again.
+
+    Parameters may come into our application from the client request, or may be configured 
+    through deployment descriptor (web.xml) elements or their corresponding annotations. 
+    When you submit a form, form values are sent as request parameters to a web application. 
+    In case of a GET request, these parameters are exposed in the URL as name value pairs 
+    and in case of POST, parameters are sent within the body of the request. 
+
+    <h2>6. What are dangers of using attributes? </h2>
+
+    It can be dangerous to use application attributes because it is global and is seen by all the 
+    request and servlets of the application. They are also not thread safe (except request attributes).
+
+    <h2> 7. What does it mean to say that http is stateless? Give an example of a stateful protocol.</h2>
+
+    HTTP is stateless in a sense that after a web server responds to a request, there's no memory
+    the server does not retain session information or a status about each communicating partner for multiple requests.
+    Example of stateful protocol: FTP and Telnet
+
+    <h2>8. Give 5 different methods for maintaining state information (count each attribute scope as one method). </h2>
+    
+    -URL Rewriting
+    -Cookies
+    -Hidden Form Fields (from Get and Post)
+    -Viewstate
+    -HttpSession 
+    -Local Persistence 
+
+    <h2>9. How long does a session last? </h2>
+
+    By default, a session lasts until there's 30 minutes of inactivity, but you can adjust
+    this limit so a session lasts from a few seconds to several hours in the web.xml file or 
+    using setMaxInactiveInterval method of the session.
+
+    <h2>10. What is a cookie, and how long does a cookie last? </h2>
+
+    Session cookies disappear once the user closes the browser window. 
+    All permanent cookies have an expiration date written in their code. 
+
+    <h2>11. What is the purpose of URL rewriting? </h2>
+
+   If your browser does not support cookies, URL rewriting provides you with another session 
+   tracking alternative. URL rewriting is a method in which the requested URL is modified to 
+   include a session ID. Advantage of URL rewriting is that it doesn’t depend upon cookies and 
+   will work whether cookies are enabled or disabled.
+
+   <h2>12. Why does the request attribute report ‘null’ for the maintaining state demo? </h2>
+
+    It is because the attribute was lost when you click the button to send the form. 
+    It was only set when you loaded the Servlet as the GET method, which doesn't happens when you send the form (you are using POST method instead).
+        </div>
+    </body>
+</html>
