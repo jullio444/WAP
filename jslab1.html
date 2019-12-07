@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Button Click</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/css.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    <div class="div1">
+<h1>The onclick Event</h1>
+
+<button onclick="clickFunc()" class="btn">Click me</button>
+<hr>
+
+<script>
+    window.onerror = function(any){
+        alert(any);
+        console.log(any);
+    }
+    function clickFunc(){
+        alert("Click works!!!!!")
+    }
+
+</script>
+    </div>
+    
+    <div class="div">
+        <img src="images/calc.jpg" alt="calculator"><span class="span">Tip Calculator</span>
+        <p><input type="text" id="total"> $ Subtotal</p>
+        <p><input type="text" id="tip"> % Tip </p>
+        <p><button class="btn2" onclick="calculate()">Calculate Tip</button></p>
+        <script>
+            function isNumber(str){
+                return !/\D/.test(str);
+            }
+            function calculate(){
+                var total = document.getElementById("total").value;
+                var tip = document.getElementById("tip").value;
+
+                if(total === "" || tip === ""){
+                    alert("Value cannot be empty");
+                    return false;
+                }else{
+                    if(isNumber(total) && isNumber(tip)){
+                         var tipcal =  ((parseInt(tip)/100)*parseInt(total) + parseInt(total));
+                        document.getElementById("tipped").innerHTML = tipcal;
+                    }else{
+                        alert("Value is not a number");
+                        return false;
+                    }
+                }
+            }
+            function gogogo(){
+                alert("Yay, it works!");
+            }
+            function gogogo() {
+                alert("Yay, it works!");
+            }
+            function somethingElse() {
+                if (5 > 2) {
+                    alert("Bigger");
+                }if (5 < 2) {
+                    alert("Smaller");
+                }
+            }
+           
+        </script>
+        
+        <hr>
+        <p>Your Total: <span id="tipped"></span></p>
+        <hr>
+    </div>
+    
+    <div class="div">
+        <h2>Corrections on popups</h2>
+            <button class="btn" onclick="gogogo();">CheckLog</button>
+            <button class="btn" onclick="gogogo();">CheckLog</button>
+            <button class="btn" onclick="gogogo();">CheckLog</button>
+            <button class="btn" onclick="gogogo();">CheckLog</button>
+    </div> 
+</body>
+</html>
