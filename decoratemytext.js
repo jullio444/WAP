@@ -13,8 +13,9 @@ window.onload = function () {
     
 };
 
-var fontSize =  parseInt(getComputedStyle(document.getElementById("txt")).getPropertyValue('font-size')); 
+const fontSize =  parseInt(getComputedStyle(document.getElementById("txt")).getPropertyValue('font-size')); 
 var f1 = 0;
+var i = 2;
 document.getElementById("btn").onclick = function () {  
     delayMsg(fontSize);    
     if(document.getElementById("checked").checked === true){
@@ -44,7 +45,7 @@ function delayMsg(fontSize) {
   }
 }
 function increaseFont(fontSize) {
-   f1 += fontSize+ 2;
+   f1 = fontSize+ i; i+= 2;
   document.getElementById("txt").style.fontSize = f1 +"pt";
 }
 
