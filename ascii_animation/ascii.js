@@ -1,5 +1,8 @@
+/* global ANIMATIONS */
+
 "use strict";
 window.onload = function () {
+    //let ANIMATIONS = [];
 
     document.getElementById("fontsize").onchange = function () {
         document.getElementById("text-area").style.fontSize = document.getElementById("fontsize").value;
