@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope Exercises</title>
+</head>
+<body>
+<h1>Javascript Scope Exercises</h1>
+<p style="color: black" >Q1. Determine what this Javascript code will print out (without running it): </p>
+   <pre style="color: black">
+    x= 1;
+    var a = 5;
+    var b = 10;
+    var c = function(a, b, c) {
+    var x = 10;
+    document.write(x);
+    document.write(a);
+    var f = function(a, b, c) {
+              b = a;
+              document.write(b);
+              b = c;
+              var x = 5;
+    }
+    f(a,b,c);
+    document.write(b);
+    }
+    c(8,9,10);
+    document.write(b);
+    document.write(x);
+    }
+   </pre>
+<p style="color: green">Result:--> 10 8 8 9 10 1 </p>
+<p style="color: black">Q2. What is the difference between a method and function? <br>
+<p style="color: green">A function is defined outside of an object. A method is defined as the property of an object. </p>
+<p style="color: black">Q3. What does 'this' refer to when used in a Java method?<br>
+<p style="color: green">'this' keyword refers to an object, that object which is executing the current bit of javascript code. In other words, every javascript function while executing has a reference to its current execution context, called this.. </p>
+<p style="color: black">Q4. What does 'this' refer to when used in a JavaScript method?</p>
+<p style="color: green">It refers to the "owner" of the method.</p>
+<p style="color: black">Q5. What does 'this' refer to when used in a JavaScript constructor function?</p>
+<p style="color: green">The keyword this inside the constructor function points to the newly created object. </p>
+<p style="color: black">Q6. Assume object x is the prototype for object y in Javascript. Object x has a method f() containing keyword 'this'. When f is called by x.f(), what does 'this' refer to?</p>
+<p style="color: green">It first refers to x(own), if property is not found it might refer to y(inherited) property. </p>
+<p style="color: black">Q7. What is a free variable in JavaScript?</p>
+<p style="color: green">Free variables are simply the variables that are neither locally declared nor passed as parameter. </p>
+<p style="color: black">Q8. Create an object that has properties with name = "fred" and major="music" and a property that is a function that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.</p>
+<p> 
+    <img src="images/scope1.jpg" alt="answer"/>
+</p>
+<p style="color: black">Q9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function. Employee objects have the following fields: name, salary, position.</p>
+<p>
+    <img src="images/scope2.jpg" alt="answer"/>
+</p>
+<p style="color: black">Q10. Write a Javascript function that takes any number of input arguments and returns the product of the arguments.</p>
+<p>
+  <img src="images/scope3.jpg" alt="answer"/>  
+</p>
+<p style="color: black">Q11. Write an arrow function that returns the maximum of its three input arguments.</p>
+<p>
+  <img src="images/scope4.jpg" alt="answer"/>    
+</p>
+</body>
+</html>
