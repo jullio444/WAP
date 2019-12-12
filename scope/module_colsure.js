@@ -1,75 +1,87 @@
-var timer = null;  // stores ID of interval timer
+(function(){
+    
+window.onload = function(){
+  document.getElementById("buttonClick").onclick = accessPrivateRudy;
+  document.getElementById("button").onclick = clickHandler;
+  addAcc = accountModule();  
+};
 
-function delayMsg2() {
-    if (timer === null) {
-        timer = setInterval(rudy, 1000);
-    } else {
-        clearInterval(timer);
-        timer = null;
-    }
-}
+ 
 
 var rubyTimer = (function () {
-    if (timer === null) {
-        timer = setInterval(rudy, 1000);
-    } else {
-        clearInterval(timer);
-        timer = null;
+    var timer = null;  // stores ID of interval timer
+    function startRudy() {
+        if (timer === null) {
+            timer = setInterval(rudy, 1000);
+        } else {
+            clearInterval(timer);
+            timer = null;
+        }
     }
 
     function rudy() {   // called each time the timer goes off
         document.getElementById("output").innerHTML += " Rudy!";
     }
-});
+    
+    return {
+        returnRudy: function(){
+            startRudy();
+        }
+    };
+})();
 
+
+function accessPrivateRudy(){
+    rubyTimer.returnRudy();
+}
 
 var accountModule = (function () {
     var accountName = "";
-    var deposit = 1;
+    var deposit = 0;
+    var accounts = [];
 
-    function getName() {
-        return accountName;
+    
+    function Account(accountName, deposit){
+        this.name = accountName;
+        this.deposit = deposit;
+        this.show = function(){
+            return "Account name : " + this.name + "    Balance : " + this.deposit;
+        };
     }
+    return function(){
+        return{
+            createAccount: function (account, depo) {
 
-    function getDeposit() {
-        return deposit;
-    }
-
-
-    return {
-        createAccount: function (accountName, deposit) {
-            this.accountName = accountName;
-            this.deposit = deposit;
-        },
-        print : function(){
-            return "Account name : " + this.accountName + "    Balance : " + this.deposit;
-        }
+                let a = new Account(account, depo);
+                accounts.push(a);
+            },   
+            print: function(element){
+                element.value = "";
+                  for(let i=0; i<accounts.length; i++){
+                     element.value+= accounts[i].show()+"\n";
+                }
+            }
+        };
     };
-});
+})();
 
+var addAcc;
 
-window.onload = function () {
+function clickHandler(){
     var form = document.getElementById("form");
     var textArea = document.getElementById("textArea");
-    var accountInfoList = [];
-    var addAcc;
 
     form.onsubmit = submit;
 
     function submit() {
         var name = document.getElementById("accountName").value;
         var balance = document.getElementById("deposit").value;
-
-        addAcc = accountModule();
+       
         addAcc.createAccount(name , balance);
-        accountInfoList.push(addAcc);
 
-        var showAccs = "";
-        for (var i = 0; i < accountInfoList.length; i++) {
-            showAccs += accountInfoList[i].print() + "\n";
-        }
-        textArea.value = showAccs;
+        addAcc.print(textArea);       
         form.reset();
         return false;
     }
-};
+}
+})();
