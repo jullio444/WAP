@@ -96,7 +96,7 @@ window.onload = function () {
     var timer = null;
     function delayMsg(fontSize) {
         if (timer === null) {
-            timer = setInterval(increaseFont, 5000, fontSize);
+            timer = setInterval(increaseFont, 500, fontSize);
         } else {
             clearInterval(timer);
             timer = null;
