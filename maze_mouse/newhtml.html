@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+        p {
+        color: blue;
+        margin: 8px;
+        }
+        span {
+        color: red;
+        }
+        .third-item{
+            
+        }
+        </style>
+    </head>
+    <body>
+        <!--<p><span>Test</span> Paragraph.</p>-->
+        <p></p>
+        <ul class="level-1">
+            <li class="item-i">I</li>
+            <li class="item-ii">II
+                <ul class="level-2">
+                    <li class="item-a">A</li>
+                    <li class="item-b">B
+                        <ul class="level-3">
+                            <li class="item-1">1</li>
+                            <li class="item-2">2</li>
+                            <li class="item-3">3</li>
+                        </ul>
+                    </li>
+                    <li class="item-c">C</li>
+                </ul>
+            </li>
+            <li class="item-iii">III</li>
+        </ul>  
+        
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li class="third-item">list item 3</li>
+            <li>list item 4</li>
+            <li>list item 5</li>
+        </ul>
+        <div class="ancestors">
+            <div> (great-grandparent)
+                <ul> 
+                    <li> (direct parent)
+                        <span>some text</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+                <script>
+                 $(document).ready(function(){
+                    $("p").last().text($("p").first().text());
+                    $("span").parent().parent().css("background-color", "green");
+
+                 $("ul ul li").css("background", "red");
+                 $(".third-item").before().css("background-clor", "blue");                    
+                 }); 
+
+                </script>
+                </body>
+
+</html>
