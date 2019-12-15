@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Quiz 3</title>
+    <script src="../JavascriptExercises/hw9/jquery.js"></script>
+</head>
+<body>
+    <h3>JQuery Quiz 3</h3>
+    <pre>
+        1. Find the text in the first paragraph (stripping out the html), then set the html of the last paragraph to
+            show it is just text (the red bold is gone).
+                &lt!doctype html&gt
+                &lthtml lang="en"&gt
+                &lthead&gt
+                &ltmeta charset="utf-8"&gt
+                &lttitle&gttext demo&lt/title&gt
+                &ltstyle&gt
+                p {
+                color: blue;
+                margin: 8px;
+                }
+                span {
+                color: red;
+                }
+                &lt/style&gt
+                &ltscript src="http://code.jquery.com/jquery-1.9.1.js"&gt&lt/script&gt
+                &lt/head&gt
+                &ltbody&gt
+                &ltp&gt&ltspan&gtTest&lt/span&gt Paragraph.&lt/p&gt
+                &ltp&gt&lt/p&gt
+                &ltscript&gt
+
+                &lt!—INSERT YOUR JQUERY CODE HERE - - &gt
+
+                &lt/script&gt
+                &lt/body&gt
+                &lt/html&gt
+            <span style="color: red">
+                 $(document).ready(function(){
+                    $("p").last().text($("p").first().text());
+                 });  
+        </span>
+
+
+        2. Write jQuery code to create a red background for the level-2 list items.
+        
+        
+       <img src="images/2.jpg" alt="Qn2" />        
+        
+        <span style="color: red">
+                 $(document).ready(function(){
+                    $("ul ul li").css("background", "red");
+                 }); 
+                 
+        </span>
+
+        3. Write jQuery code to select the element that comes immediately before item three and change its background color to blue.
+            <img src="images/3.jpg" alt="Qn3" /> 
+           
+             <span style="color: red">
+                $(document).ready(function(){
+                    $(".third-item").before().css("background-clor", "blue"); 
+                });
+            </span>
+        4.  Let us one additional requirement for the "Go Vegetarian" button of the Webville Eatery Menu
+            described in Chapter 4 of Head First jQuery: "Turkey" in the ingredient list of any entree is replaced by
+            "Mashed Potatoes" in the vegetarian version. You may assume there is a class "turkey" that identifies
+            these items in the list. Describe the changes to the Javascript (jQuery) code to implement this new
+            requirement.
+             <span style="color: red">
+        $(“button#vegOn").click(function(){
+
+            $('.turkey').after("&ltli class=‘tofu’&gt&ltem&gtTofu&lt/em&gt&lt/li&gt")
+            $f = $('.turkey').detach();
+        });
+            </span>
+        5.  Write Javascript (jQuery) code to change the color of the parent and grandparent list items of the span
+            of text ("some text") in the following to green.
+            <img src="images/5.jpg" alt="Qn3" /> 
+             <span style="color: red">
+                 $(document).ready(function(){
+                    $("span").parent().parent().css("background-color", "green");
+                 )};
+            </span>
+    </pre>
+</body>
+</html>

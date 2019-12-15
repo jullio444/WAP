@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Quiz 1</title>
+    <script src="../JavascriptExercises/hw9/jquery.js"></script>
+
+</head>
+<body>
+    <h3>JQuery Quiz 1</h3>
+    <pre>
+        1. In jQuery terminology, what is the difference between the “jQuery function” and the “jQuery object”?
+            <span style="color: red">
+            A jquery function is the predefined function within the jQuery library whereas
+            A jQuery object is array-like which means that it contains zero or more indexes (properties which names are
+            positive integers starting with zero)
+            </span>
+
+        2. Write jQuery code to find all h1 elements that are children of a div element and make their background color red.
+        Sample HTML:
+            <span style="color: red">
+            $(document).ready(function () {
+                $("div h1").css("background-color", 'red');
+            });
+            </span>
+        3. Use a jQuery method to insert the text "YES!" at the end of the  &lt;p&gt; element.
+            <span style="color: red">
+            $(document).ready(function () {
+                $("p").append("Yes!");
+            });
+            </span>
+
+    </pre>
+</body>
+</html>
